@@ -144,8 +144,44 @@ print(oceny)
 print(oceny['Tomek'])  # [3, 4, 5, 6, 5, 5]
 print(oceny['Tomek'][0])  # 3
 
-dictionary = {}
+dictionary = {}  # pusty słownik
 dict_pusty = dict()
 print(dictionary)  # {}
 print(dict_pusty)  # {}
 print(type(dict_pusty))  # <class 'dict'> pusty słownik
+
+# zbiór - set()
+# przechowuje unikalne wartości
+# nie zachowuje kolejności przy dodawaniu eleemntów
+# nie posiada indeksu
+lista = [45, 55, 66, 77, 45, 55, 66]
+zbior1 = set(lista)
+print(zbior1)  # {66, 77, 45, 55}
+
+zbior1.add(100)
+zbior1.add(102)
+zbior1.add(105)
+zbior1.add(77)
+zbior1.add(55)
+print(zbior1)  # {66, 100, 102, 105, 77, 45, 55}
+
+zbior2 = {45, 55, 166, 177}
+
+print(zbior1.difference(zbior2))  # {66, 100, 102, 105, 77}
+print(zbior2.difference(zbior1))  # {177, 166}
+
+print(zbior1 & zbior2)  # {45, 55}, część wspólna zbiorów
+print(zbior1.intersection(zbior2))  # {45, 55}
+
+pusty_zbior = set()  # tylko i wyłacznie słowko set()
+print(pusty_zbior)  # set()
+print(type(pusty_zbior))  # <class 'set'>
+
+lista_ze_zbioru = list(zbior1)
+print(lista_ze_zbioru)  # [66, 100, 102, 105, 77, 45, 55]
+
+matrix = [[3, 4, 5], [6, 7, 8], [9, 10, 11]]
+print(matrix)  # [[3, 4, 5], [6, 7, 8], [9, 10, 11]]
+
+print(type(matrix))  # <class 'list'>
+print(matrix[0][0])  # 3
