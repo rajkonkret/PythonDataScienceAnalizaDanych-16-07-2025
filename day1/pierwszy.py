@@ -130,3 +130,32 @@ print(f"""Tekst
 """Komentarz
     wielolinijkowy - dokumentacja"""
 print(print.__doc__)
+
+starszy = "Mam na imię %s"  # %s - str
+print(starszy % name)  # Mam na imię 90
+# print("Liczba: %f" % "Radek")  # TypeError: must be real number, not str, %f - float
+
+print("Wynik:", liczba)  # Wynik: 3.900001
+print("Wynik:", liczba, sep="......")  # Wynik:......3.900001
+
+print(100 / 3)  # 333333333333336
+print(100 // 3)  # 33, część całkowita z dzielenia
+print(100 % 3)  # modulo, reszta z dzielenia
+print(10 / 3)  # 3.3333333333333335
+print(10 % 3)  # 1 reszty 3 * 3 + 1 = 10
+
+zysk = 678987098678
+print(f'Nasza duża liczba: {zysk}')  # Nasza duża liczba: 678987098678
+print(f'Nasza duża liczba: {zysk:,}')  # Nasza duża liczba: 678,987,098,678
+print(f'Nasza duża liczba: {zysk:_}')  # Nasza duża liczba: 678_987_098_678
+print(f'Nasza duża liczba: {zysk:_}'.replace("_", " "))  # Nasza duża liczba: 678 987 098 678
+
+parametr = 100_000_000_000
+print(parametr)  # 100000000000
+print(type(parametr))  # <class 'int'>
+
+tekst = "Witaj Świecie"
+encoded_text = tekst.encode("utf-8")
+print(encoded_text)  # b'Witaj \xc5\x9awiecie'
+print(type(encoded_text))  # <class 'bytes'>, bajtowy
+print(encoded_text.decode('utf-8'))  # Witaj Świecie
