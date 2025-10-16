@@ -65,5 +65,38 @@ def ile_razy(*ile, **co):
 # ** argumentów nazwane, słownikowe
 ile_razy((4, 5, 6))  # ((4, 5, 6),) -> ile
 ile_razy(4, 5, 6, name="Radek", status="OK")  # ((4, 5, 6),) -> ile
+
+
 # (4, 5, 6)
 # {'name': 'Radek', 'status': 'OK'}
+
+def multi(a, b):
+    try:
+        return a * b
+    except TypeError:
+        return "nieprawidłowe dane"
+    except ValueError:
+        return 0
+
+
+print(multi(4, 4))  # 16
+print(multi("4", 4))  # 4444
+print(multi("4", None))  # nieprawidłowe dane
+
+
+def multi2(a, b):
+    try:
+        return a * b
+    except Exception as e:
+        return "nieprawidłowe dane:", e.args
+
+
+print(multi2(4, 4))  # 16
+print(multi2("4", 4))  # 4444
+print(multi2("4", None))
+# ('nieprawidłowe dane:', ("can't multiply sequence by non-int of type 'NoneType'",))
+
+try:
+    print(5 / 0)
+except ZeroDivisionError as e:
+    print(e)  # division by zero
