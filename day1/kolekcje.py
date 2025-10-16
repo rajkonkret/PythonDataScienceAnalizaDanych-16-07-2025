@@ -69,3 +69,21 @@ print(osoby)  # ['Tomek', 'Ewa', 'Adam', 'Anna', 'Piotr', 'Przemek', 'Zenek']
 nowa_lista = osoby + lista_pusta
 print(nowa_lista)
 # ['Tomek', 'Ewa', 'Adam', 'Anna', 'Piotr', 'Przemek', 'Zenek', 'Anna', 'Piotr', 'Przemek', 'Zenek']
+
+n_lista = nowa_lista  # kopia referencji, miejsca w pamięci
+print(n_lista)
+print(nowa_lista)
+lista_copy = nowa_lista.copy()  # kopia elementów listy
+# ['Tomek', 'Ewa', 'Adam', 'Anna', 'Piotr', 'Przemek', 'Zenek', 'Anna', 'Piotr', 'Przemek', 'Zenek']
+# ['Tomek', 'Ewa', 'Adam', 'Anna', 'Piotr', 'Przemek', 'Zenek', 'Anna', 'Piotr', 'Przemek', 'Zenek']
+nowa_lista.clear()  # usunicie wszystkich elementw z listy
+print(n_lista)  # []
+print(nowa_lista)  # []
+print(lista_copy)
+# ['Tomek', 'Ewa', 'Adam', 'Anna', 'Piotr', 'Przemek', 'Zenek', 'Anna', 'Piotr', 'Przemek', 'Zenek']
+print(id(nowa_lista))
+print(id(n_lista))
+print(id(lista_copy))
+# 2655419609344
+# 2655419609344
+# 2655422290624
