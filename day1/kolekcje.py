@@ -87,3 +87,65 @@ print(id(lista_copy))
 # 2655419609344
 # 2655419609344
 # 2655422290624
+
+# krotka (tuple) - niemutowalna lista, tylko do odczytu
+# pozwala lepiej zarzadzac pamięcią
+krotka = (23, 45, 67, "Radek")
+print(krotka)
+
+krotka1 = "radek", "tomek", "zenek"
+print(krotka1)  # ('radek', 'tomek', 'zenek')
+print(type(krotka1))  # <class 'tuple'>
+
+krotka2 = ("Radek",)
+print(type(krotka2))
+temp = 36, 6
+print(type(temp))  # <class 'tuple'>
+
+print(len(krotka1))  # 3
+
+# rozpakowanie tupli
+a, *b = "radek", "tomek", "zenek"
+print(a, b)  # radek, ['tomek', 'zenek']
+
+# krotka[4] = 4  # TypeError: 'tuple' object does not support item assignment
+
+# słownik - dane typu klucz-wartosc
+# {"name" : "John"}
+# odpowiednik jsona
+oceny = {"Tomek": 4,
+         "Radek": 5,
+         "Agata": 5,
+         "Zenek": 3
+         }
+
+print(oceny)  # {'Tomek': 4, 'Radek': 5, 'Agata': 5, 'Zenek': 3}
+print(type(oceny))  # <class 'dict'>
+print(oceny["Tomek"])  # wypisanie wartości z słownika dla danego klucza
+# print(oceny["tomek"]) # KeyError: 'tomek'
+print(oceny.get("Tomek"))  # 4
+print(oceny.get("tomek"))  # None
+
+print(oceny.keys())
+print(oceny.values())
+print(oceny.items())
+# dict_keys(['Tomek', 'Radek', 'Agata', 'Zenek'])
+# dict_values([4, 5, 5, 3])
+# dict_items([('Tomek', 4), ('Radek', 5), ('Agata', 5), ('Zenek', 3)])
+
+oceny['Agata'] = 6  # zmiana wartości dla klucza
+print(oceny)  # {'Tomek': 4, 'Radek': 5, 'Agata': 6, 'Zenek': 3}
+
+lista_oceny = [3, 4, 5, 6, 5, 5]
+oceny['Tomek'] = lista_oceny
+print(oceny)
+# {'Tomek': [3, 4, 5, 6, 5, 5], 'Radek': 5, 'Agata': 6, 'Zenek': 3}
+
+print(oceny['Tomek'])  # [3, 4, 5, 6, 5, 5]
+print(oceny['Tomek'][0])  # 3
+
+dictionary = {}
+dict_pusty = dict()
+print(dictionary)  # {}
+print(dict_pusty)  # {}
+print(type(dict_pusty))  # <class 'dict'> pusty słownik
