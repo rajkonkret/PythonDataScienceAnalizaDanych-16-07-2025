@@ -189,6 +189,7 @@ print(matrix[0][0])  # 3
 # input() - zwraca str
 a = int(input("Podaj  liczbę a"))
 b = input("Podaj  liczbę b")
+# float() - rzutowanie na zmiennoprzecinkowe
 print(f"Suma liczb {a} + {b} = {a + float(b)}")
 # Podaj  liczbę a45
 # Podaj  liczbę b67
