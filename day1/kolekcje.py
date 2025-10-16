@@ -185,3 +185,11 @@ print(matrix)  # [[3, 4, 5], [6, 7, 8], [9, 10, 11]]
 
 print(type(matrix))  # <class 'list'>
 print(matrix[0][0])  # 3
+
+# input() - zwraca str
+a = int(input("Podaj  liczbę a"))
+b = input("Podaj  liczbę b")
+print(f"Suma liczb {a} + {b} = {a + float(b)}")
+# Podaj  liczbę a45
+# Podaj  liczbę b67
+# Suma liczb 45 + 67 = 112.0
