@@ -121,3 +121,5 @@ https://www.hackerrank.com/challenges/correlation-and-regression-lines-6/problem
 https://www.kaggle.com/
 https://naukapythona.com.pl/
 https://naukajava.online/
+
+ pip install -r .\requirements.txt
