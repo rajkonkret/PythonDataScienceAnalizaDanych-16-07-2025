@@ -116,3 +116,8 @@ spam -= 1    spam = spam - 1
 spam *= 1    spam = spam * 1
 spam /= 1    spam = spam / 1
 spam %= 1    spam = spam % 1
+
+https://www.hackerrank.com/challenges/correlation-and-regression-lines-6/problem?isFullScreen=true
+https://www.kaggle.com/
+https://naukapythona.com.pl/
+https://naukajava.online/
